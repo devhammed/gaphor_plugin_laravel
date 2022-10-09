@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gaphor-plugin-laravel"
+version = "0.1.0"
+description = "This plugin extends Gaphor with Laravel migrations export functionality."
+authors = ["Hammed Oyedele <itz.harmid@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gaphor_plugin_laravel"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+gaphor = "^2.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."gaphor.services"]
+"export-laravel-migrations" = "gaphor_plugin_laravel:ExportLaravelMigrations"
